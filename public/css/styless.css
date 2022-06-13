@@ -1,0 +1,103 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+}
+.navigation{
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background: #3e0748;
+    transition: .5s;
+    overflow: hidden;
+}
+.navigation:hover,
+.navigation.active{
+    width: 300px;
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+.navigation ul li:hover{
+    background: #ea1d63;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    color: #fff;
+    pointer-events: none;
+    user-select: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    white-space: nowrap;
+}
+.navigation ul li a .icon .fas{
+    font-size: 24px;
+}
+.toggle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: #3e0748;
+    background-image: url(./bars-solid\ \(1\).svg);
+    color: #fff;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    transition: 0.2s;
+    user-select: none;
+}
+.toggle.active{
+    background: #ea1d63;
+    background-image: url(./times-solid.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    color: #fff;
+}
+@media (max-width:767px) {
+    .navigation{
+        left: -60px;
+    }
+    .navigation.active{
+        left: 0;
+        width: 100%;
+    }
+}
